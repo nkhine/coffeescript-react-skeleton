@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "coffee": "coffee --output ./dist ./src",
-    "webpack": "webpack ./dist/index.js",
+    "scss:css": "echo '=> convert sass -> css' && node-sass --include-path public/scss public/scss/main.scss -o public/css",
+    "minify:css": "echo '=> minify:css' && cleancss public/css/main.css -o public/css/main.min.css",
+    "coffee": "coffee --output ./build ./app/client",
+    "webpack": "webpack ./build/index.js",
     "minify:js": "echo '=> minify:js' && uglifyjs public/js/bundle.js -o public/js/bundle.min.js"
   },
   "keywords": [
@@ -16,10 +18,11 @@
   "author": "Norman Khine <norman@khine.net> (http://khine.net)",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.12.12",
+    "clean-css": "^3.4.17",
     "coffee-loader": "^0.7.2",
     "coffee-script": "^1.10.0",
     "lodash": "^4.13.1",
+    "node-sass": "^3.7.0",
     "webpack": "^1.13.1"
   }
 }
