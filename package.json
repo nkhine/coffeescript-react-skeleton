@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "coffee": "coffee --output ./dist ./src",
-    "webpack": "webpack ./dist/entry.js bundle.js"
+    "webpack": "webpack ./dist/index.js",
+    "minify:js": "echo '=> minify:js' && uglifyjs public/js/bundle.js -o public/js/bundle.min.js"
   },
   "keywords": [
     "coffee-script",
