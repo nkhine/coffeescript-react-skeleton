@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "coffee": "coffee --output ./dist ./src/coffee-lib.coffee",
-    "webpack": "webpack ./src/entry.js bundle.js"
+    "coffee": "coffee --output ./dist ./src",
+    "webpack": "webpack ./dist/entry.js bundle.js"
   },
   "keywords": [
     "coffee-script",
